@@ -1,7 +1,18 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:1.3.10"
+    }
+}
+
 plugins {
     id 'java'
     id 'org.jetbrains.intellij' version '0.3.12'
 }
+
+apply plugin: 'kotlin'
 
 group 'io.github.takc923'
 version '0.1-SNAPSHOT'
