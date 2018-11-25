@@ -9,6 +9,7 @@
     ]]></description>
 
     <depends>com.intellij.modules.lang</depends>
+    <idea-version since-build="183" />
 
     <actions>
         <action id="RecenterTopBottomAction" class="RecenterTopBottomAction" text="recenter-top-bottom" description="scroll recenter, top and bottom">
