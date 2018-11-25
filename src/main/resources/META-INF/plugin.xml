@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>io.github.takc923.recenter-top-bottom</id>
-    <name>Plugin display name here</name>
+    <name>recenter-top-bottom</name>
     <vendor email="support@yourcompany.com" url="http://www.yourcompany.com">YourCompany</vendor>
 
     <description><![CDATA[
