@@ -15,7 +15,7 @@ plugins {
 apply plugin: 'kotlin'
 
 group 'io.github.takc923'
-version '0.1'
+version '0.2'
 
 sourceCompatibility = 1.8
 
@@ -32,5 +32,14 @@ intellij {
     updateSinceUntilBuild false
 }
 patchPluginXml {
-    changeNotes """Initial release"""
+    changeNotes """
+<p>v0.2</p>
+<ul>
+  <li>Update kotlin and supported intellij version</li>
+</ul>
+<p>v0.1</p>
+<ul>
+  <li>Initial release</li>
+</ul>
+"""
 }
