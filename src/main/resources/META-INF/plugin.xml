@@ -9,13 +9,13 @@
     ]]></description>
 
     <depends>com.intellij.modules.lang</depends>
-    <idea-version since-build="183" />
+    <idea-version since-build="191" />
 
     <actions>
         <action id="RecenterTopBottomAction" class="RecenterTopBottomAction" text="recenter-top-bottom" description="scroll recenter, top and bottom">
+            <keyboard-shortcut first-keystroke="ctrl L" keymap="$default"/>
             <keyboard-shortcut first-keystroke="ctrl L" keymap="Mac OS X 10.5+"/>
             <keyboard-shortcut first-keystroke="ctrl L" keymap="Mac OS X"/>
-            <keyboard-shortcut first-keystroke="ctrl L" keymap="$default"/>
         </action>
     </actions>
 </idea-plugin>
