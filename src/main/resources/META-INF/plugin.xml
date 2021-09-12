@@ -12,7 +12,7 @@
     <idea-version since-build="211" />
 
     <actions>
-        <action id="RecenterTopBottomAction" class="RecenterTopBottomAction" text="recenter-top-bottom" description="scroll recenter, top and bottom">
+        <action id="RecenterTopBottomAction" class="RecenterTopBottomAction" text="recenter-top-bottom" description="Scroll, so the current line is the center-most text line. On subsequent consecutive invocations, make the current line the top line, the bottom line, and so on in cyclic order.">
             <keyboard-shortcut first-keystroke="ctrl L" keymap="$default"/>
             <keyboard-shortcut first-keystroke="ctrl L" keymap="Mac OS X 10.5+" replace-all="true"/>
             <keyboard-shortcut first-keystroke="ctrl L" keymap="Mac OS X" replace-all="true"/>
