@@ -15,7 +15,7 @@ plugins {
 apply plugin: 'kotlin'
 
 group 'io.github.takc923'
-version '0.3-SNAPSHOT'
+version '0.3'
 
 sourceCompatibility = 11
 
@@ -34,6 +34,11 @@ intellij {
 
 patchPluginXml {
     changeNotes = """
+<p>v0.3</p>
+<ul>
+  <li>Fix weired keyboard shortcut settings.</li>
+  <li>Update dependencies.</li>
+</ul>
 <p>v0.2</p>
 <ul>
   <li>Update kotlin and supported intellij version</li>
