@@ -28,7 +28,7 @@ repositories {
 }
 
 intellij {
-    version '2021.1'
+    version = '2021.1'
     updateSinceUntilBuild = false
 }
 
