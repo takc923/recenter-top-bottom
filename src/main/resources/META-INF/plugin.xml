@@ -3,13 +3,7 @@
     <name>recenter-top-bottom</name>
     <vendor url="https://github.com/takc923">takc923</vendor>
 
-    <description><![CDATA[
-    <p>This plugin scroll like recenter-top-bottom of emacs.</p>
-    <p>Default keymap is C-l</p>
-    ]]></description>
-
     <depends>com.intellij.modules.lang</depends>
-    <idea-version since-build="211" />
 
     <actions>
         <action id="RecenterTopBottomAction" class="RecenterTopBottomAction" text="recenter-top-bottom" description="Scroll, so the current line is the center-most text line. On subsequent consecutive invocations, make the current line the top line, the bottom line, and so on in cyclic order.">
