@@ -26,6 +26,7 @@ tasks {
         kotlinOptions.jvmTarget = "17"
     }
     patchPluginXml {
+        sinceBuild.set("231")
         changeNotes.set(
             """
             <p>v0.3</p>
