@@ -3,11 +3,6 @@
     <name>recenter-top-bottom</name>
     <vendor url="https://github.com/takc923">takc923</vendor>
 
-    <description><![CDATA[
-    <p>This plugin scroll like recenter-top-bottom of emacs.</p>
-    <p>Default keymap is C-l</p>
-    ]]></description>
-
     <depends>com.intellij.modules.lang</depends>
 
     <actions>

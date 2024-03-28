@@ -27,6 +27,12 @@ tasks {
     }
     patchPluginXml {
         sinceBuild.set("231")
+        pluginDescription.set(
+            """
+            <p>This plugin scroll like recenter-top-bottom of emacs.</p>
+            <p>Default keymap is C-l</p>
+            """.trimIndent()
+        )
         changeNotes.set(
             """
             <p>v0.3</p>
