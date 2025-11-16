@@ -1,7 +1,10 @@
+import org.gradle.jvm.toolchain.JavaLanguageVersion
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     id("java")
-    id("org.jetbrains.kotlin.jvm") version "1.9.22"
-    id("org.jetbrains.intellij") version "1.17.2"
+    kotlin("jvm") version "2.1.21"
+    id("org.jetbrains.intellij.platform") version "2.10.4"
 }
 
 group = "io.github.takc923"
@@ -9,32 +12,47 @@ version = "0.4-SNAPSHOT"
 
 repositories {
     mavenCentral()
+    intellijPlatform {
+        defaultRepositories()
+    }
 }
 
-intellij {
-    version.set("2023.1")
-    updateSinceUntilBuild.set(false)
-    pluginName.set("recenter-top-bottom")
+dependencies {
+    intellijPlatform {
+        intellijIdeaCommunity("2025.2.1")
+    }
 }
 
-tasks {
-    withType<JavaCompile> {
-        sourceCompatibility = "17"
-        targetCompatibility = "17"
+kotlin {
+    jvmToolchain(21)
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
-    withType<org.jetbrains.kotlin.gradle.tasks.KotlinCompile> {
-        kotlinOptions.jvmTarget = "17"
+}
+
+java {
+    toolchain {
+        languageVersion.set(JavaLanguageVersion.of(21))
     }
-    patchPluginXml {
-        sinceBuild.set("231")
-        pluginDescription.set(
-            """
+}
+
+intellijPlatform {
+    pluginConfiguration {
+        id = "io.github.takc923.recenter-top-bottom"
+        name = "recenter-top-bottom"
+        version = project.version.toString()
+        vendor {
+            name = "takc923"
+            url = "https://github.com/takc923"
+        }
+        ideaVersion {
+            sinceBuild = "252"
+        }
+        description = """
             <p>This plugin scroll like recenter-top-bottom of emacs.</p>
             <p>Default keymap is C-l</p>
-            """.trimIndent()
-        )
-        changeNotes.set(
-            """
+        """.trimIndent()
+        changeNotes = """
             <p>v0.3</p>
             <ul>
               <li>Fix weired keyboard shortcut settings.</li>
@@ -48,7 +66,12 @@ tasks {
             <ul>
               <li>Initial release</li>
             </ul>
-            """.trimIndent()
-        )
+        """.trimIndent()
+    }
+
+    pluginVerification {
+        ides {
+            recommended()
+        }
     }
 }

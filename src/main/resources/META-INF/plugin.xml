@@ -1,8 +1,4 @@
 <idea-plugin>
-    <id>io.github.takc923.recenter-top-bottom</id>
-    <name>recenter-top-bottom</name>
-    <vendor url="https://github.com/takc923">takc923</vendor>
-
     <depends>com.intellij.modules.lang</depends>
 
     <actions>
